@@ -1,9 +1,21 @@
+// ## Colors 
+// ### Primary 
+$DesaturatedRed: hsl(0, 36%, 70%); 
+$SoftRed: hsl(0, 93%, 68%); 
+// ### Neutral 
+$DarkGrayishRed: hsl(0, 6%, 24%);
+$DarkGrayishRed-sds: hsla(0, 36%, 70%, 0.5);
+// ### Gradients 
+$Linear: hsl(0, 0%, 100%);
 /* $Linear: hsl(0, 100%, 98%);
 $Linear: hsl(135deg, 0%, 100%);
 $Linear: hsl(135deg, 100%, 98%); */
-/* 
+
+$Linear: hsl(0, 80%, 86%);
+$Linear1: hsl(0, 74%, 74%);/* 
 $Linear1: hsl(135deg, 80%, 86%);
 $Linear1: hsl(135deg, 74%, 74%); */
+
 * {
   box-sizing: border-box;
 }
@@ -12,66 +24,57 @@ body {
   padding: 0;
   margin: 0;
   max-height: 97vh;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .box {
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 60px auto;
-  grid-template-areas: "header aside" "main aside";
+  grid-template-areas: "header aside" "main aside"
 }
-
 .header {
   grid-area: header;
   padding: 60px;
 }
-
 .main {
   max-width: 550px;
   width: auto;
   padding: 60px;
   grid-area: main;
 }
-
 .main__title {
   text-transform: uppercase;
   line-height: 3.5rem;
   letter-spacing: 1.5rem;
   font-size: 48px;
   font-weight: 300;
-  color: hsl(0deg, 36%, 70%);
+  color: $DesaturatedRed;
 }
-
 .main__title-bold {
   display: block;
   font-weight: 600;
-  color: hsl(0deg, 6%, 24%);
+  color: $DarkGrayishRed;
 }
-
 .main__paragraph {
-  color: hsl(0deg, 36%, 70%);
+  color: $DesaturatedRed;
   line-height: 1.5rem;
   font-weight: 400;
 }
-
 .footer {
   width: 100%;
   position: relative;
 }
-
 .footer__txt {
   width: 100%;
   padding: 10px 15px;
-  border: 1px solid hsla(0deg, 36%, 70%, 0.5);
+  border: 1px solid $DarkGrayishRed-sds;
   border-radius: 20px;
-  color: hsl(0deg, 6%, 24%);
+  color: $DarkGrayishRed;
 }
-
 .icon__error {
   display: none;
   position: absolute;
@@ -80,10 +83,9 @@ body {
   width: 20px;
   height: 20px;
 }
-
 .btn__footer {
-  background-color: hsl(0deg, 74%, 74%);
-  border: 2px solid hsl(0deg, 74%, 74%);
+  background-color: $Linear1;
+  border: 2px solid $Linear1;
   padding: 7px 30px;
   border-radius: 15px;
   border: none;
@@ -92,59 +94,49 @@ body {
   right: -30px;
   cursor: pointer;
 }
-
 .footer__alert {
   display: none;
-  color: hsl(0deg, 93%, 68%);
+  color: $SoftRed;
   font-weight: 600;
   font-size: 12px;
   margin-left: 2rem;
 }
-
 .banner {
   grid-area: aside;
 }
-
 .banner__img {
   height: 100%;
   width: 100%;
 }
-
 .banner__img-mobile {
   display: none;
 }
-
 .attribution {
   align-self: center;
 }
-
 @media (hover: hover) {
   .btn__footer:hover {
-    background-color: hsl(0deg, 80%, 86%);
+    background-color: $Linear;
     top: -2px;
     padding: 10px 30px;
-    box-shadow: 0px 10px 10px hsla(0deg, 36%, 70%, 0.5);
+    box-shadow: 0px 10px 10px $DarkGrayishRed-sds;
   }
 }
-.footer__txt:focus {
-  outline: 2px solid hsl(0deg, 93%, 68%);
+.footer__txt:focus{
+  outline: 2px solid $SoftRed;
 }
-
 .footer__alert-active,
 .icon__error-active {
   display: inline;
 }
-
 .attribution {
   text-align: center;
 }
-
 .attribution__paragraph {
   font-size: 11px;
 }
-
 .attribution__link {
-  color: hsl(0deg, 93%, 68%);
+  color: $SoftRed;
   text-decoration: none;
 }
 
@@ -153,18 +145,15 @@ body {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 5% 40% 50%;
-    grid-template-areas: "header" "aside" "main";
+    grid-template-areas: "header" "aside" "main"
   }
-
   .header {
     padding: 15px 30px;
   }
-
   .main {
     padding: 0 2rem;
     width: 100%;
   }
-
   .main__title {
     text-align: center;
     line-height: 2rem;
@@ -173,19 +162,16 @@ body {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-
   .main__paragraph {
     width: 100%;
     text-align: center;
   }
-
   .footer {
     width: 90%;
     padding-left: 0;
     padding-right: 2rem;
     margin-bottom: 2rem;
   }
-
   .banner__img {
     display: none;
   }
@@ -195,5 +181,3 @@ body {
     width: 100%;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
