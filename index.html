@@ -24,61 +24,63 @@
   </head>
   <body>
     <article class="box">
-      <header class="header">
-        <h1 class="header__title">
-          <img src="./images/logo.svg" alt="logo" class="header__img" />
-        </h1>
-      </header>
-      <section class="main">
-        <h2 class="main__title">
-          We're
-          <span class="main__title-bold"> coming soon </span>
-        </h2>
+      <div class="box__left">
+        <header class="header">
+          <h1 class="header__title">
+            <img src="./images/logo.svg" alt="logo" class="header__img" />
+          </h1>
+        </header>
+        <img
+          src="./images/hero-mobile.jpg"
+          alt="hero mobile"
+          class="img-mobile"
+        />
+        <section class="main">
+          <h2 class="main__title">
+            We're
+            <span class="main__title-bold">coming soon</span>
+          </h2>
 
-        <p class="main__paragraph">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </p>
+          <p class="main__paragraph">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
 
-        <footer class="footer">
-          <div class="footer__conte">
-            <input
-              class="footer__txt"
-              type="email"
-              name="txtEmail"
-              id="email"
-              placeholder="Email Address"
-            />
-            <img
-              src="./images/icon-error.svg"
-              alt="icon error"
-              class="icon__error"
-              id="icon"
-            />
-          </div>
-          <button type="submit" id="btn" class="btn__footer">
-            <img
-              src="./images/icon-arrow.svg"
-              alt="icon arrow"
-              class="icon__arrow"
-            />
-          </button>
-          <label id="alert" class="footer__alert"
-            >Please provide a valid email</label
-          >
-        </footer>
-      </section>
+          <footer class="footer">
+            <div class="footer__conte">
+              <input
+                class="footer__txt"
+                type="email"
+                name="txtEmail"
+                id="email"
+                placeholder="Email Address"
+              />
+              <img
+                src="./images/icon-error.svg"
+                alt="icon error"
+                class="icon__error"
+                id="icon"
+              />
+            </div>
+            <button type="submit" id="btn" class="btn__footer">
+              <img
+                src="./images/icon-arrow.svg"
+                alt="icon arrow"
+                class="icon__arrow"
+              />
+            </button>
+            <label id="alert" class="footer__alert"
+              >Please provide a valid email</label
+            >
+          </footer>
+        </section>
+      </div>
       <aside class="banner">
         <img
           src="./images/hero-desktop.jpg"
           alt="hero desktop"
           class="banner__img"
-        />
-        <img
-          src="./images/hero-mobile.jpg"
-          alt="hero mobile"
-          class="banner__img-mobile"
         />
       </aside>
     </article>
